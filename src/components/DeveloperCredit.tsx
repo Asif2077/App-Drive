@@ -47,7 +47,9 @@ export const DeveloperCredit: React.FC<DeveloperCreditProps> = ({ showOnMobile }
       
       /* 2. Mobile Position: Top Right */
       top-6 right-3
-      
+      /* 3. Desktop Position: Bottom Left */
+      md:fixed md:bottom-4 md:left-4 md:top-auto md:right-auto
+
       items-center justify-center
       cursor-pointer md:cursor-default
       transition-all duration-700 ease-out
