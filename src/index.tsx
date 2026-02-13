@@ -11,7 +11,8 @@ import { CoverGenerator } from './components/CoverGenerator';
 import { FolderCard } from './components/FolderCard';
 import { FileCard } from './components/FileCard';
 import { UploadProgress } from './components/UploadProgress';
-import { DeveloperCredit } from './components/DeveloperCredit'; 
+import { DeveloperCredit } from './components/DeveloperCredit';
+//import { DeveloperCredit } from './components/DeveloperCredit'; 
 
 
 
@@ -615,12 +616,7 @@ const App = () => {
             </div>
         </div>
         {/* MAIN CONTENT */}
-      <main className="flex-1 overflow-y-auto p-4 md:p-8 relative bg-gradient-to-br from-[#0f172a] to-[#1e1b4b]">
-        
-        {/* ... All your existing content, grids, folders, etc ... */}
-        <div className="flex flex-col gap-6 mb-8">
-           {/* ... existing grids ... */}
-        </div>
+      
 
         {/* PASTE IT HERE: AT THE VERY BOTTOM OF MAIN */}
       {/* showOnMobile={true} only if we are in 'All Files'.
@@ -628,7 +624,7 @@ const App = () => {
         */}
         <DeveloperCredit showOnMobile={activeSection === 'All Files'} />
 
-      </main> {/* Closing tag of main */}
+       {/* Closing tag of main */}
         
       
       </main>
