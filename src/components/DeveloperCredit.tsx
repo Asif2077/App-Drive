@@ -43,7 +43,7 @@ export const DeveloperCredit: React.FC<DeveloperCreditProps> = ({ showOnMobile }
       
       /* POSITIONING */
      /* 1. Base Position: Fixed */
-      absolute z-[100]
+      absolute z-[20]
       
       /* 2. Mobile Position: Top Right */
       top-6 right-3

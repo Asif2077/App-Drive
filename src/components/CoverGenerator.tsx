@@ -101,7 +101,7 @@ export const CoverGenerator = ({ onClose }: { onClose: () => void }) => {
         .gen-section-header { 
             font-size: 0.75rem; 
             text-transform: uppercase; 
-            color: #8b75af;
+            color: #ffffff;
             font-weight: 800; 
             margin-top: 15px; 
             letter-spacing: 0.1em;
@@ -122,8 +122,8 @@ export const CoverGenerator = ({ onClose }: { onClose: () => void }) => {
             width: 100%; 
             padding: 12px 16px; 
             /* Subtle dark glass for inputs */
-            background: rgba(0, 0, 0, 0.2); 
-            border: 1px solid rgba(255, 255, 255, 0.1); 
+            background: rgba(0, 0, 0, 0.3); 
+            border: 1px solid rgba(255, 255, 255, 0.3); 
             border-radius: 12px; 
             font-size: 14px; 
             color: #fff;
@@ -140,7 +140,7 @@ export const CoverGenerator = ({ onClose }: { onClose: () => void }) => {
         .gen-custom-file-btn { 
             background: rgba(255, 255, 255, 0.05); 
             border: 1px dashed rgba(255, 255, 255, 0.3); 
-            color: #e2e8f0; 
+            color: #e5e2f0; 
             padding: 10px; 
             text-align: center; 
             border-radius: 12px; 
@@ -169,8 +169,8 @@ export const CoverGenerator = ({ onClose }: { onClose: () => void }) => {
             border: 1px solid rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
             border-radius: 9999px; /* Fully rounded */
-            color: white;
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            color: #ffffff; /* Tailwind's blue-600 */
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.6);
             
             display: flex;
             align-items: center;
@@ -238,6 +238,9 @@ export const CoverGenerator = ({ onClose }: { onClose: () => void }) => {
             
             html, body { 
                 width: 100%; 
+                height: auto !important;
+                min-height: 0 !important;
+                overflow: visible !important;
                 background-color: #fff !important; 
                 margin: 0 !important; 
                 padding: 0 !important; 
@@ -249,7 +252,7 @@ export const CoverGenerator = ({ onClose }: { onClose: () => void }) => {
             #cover-gen-root, #cover-gen-root * { visibility: visible; }
             
             #cover-gen-root { 
-                position: relative; /* Fixed absolute positioning issue */
+                position: absolute; /* Fixed absolute positioning issue */
                 left: 0; 
                 top: 0; 
                 background: white; 
@@ -296,7 +299,7 @@ export const CoverGenerator = ({ onClose }: { onClose: () => void }) => {
 
             <div className="gen-root">
                 <div className="gen-controls">
-                    <h2>Cover Generator</h2>
+                    <h2>Cover Page Generator</h2>
                     
                     <div className="text-xs text-center text-gray-400 mb-2 border border-white/10 rounded p-2 bg-black/20">
                         Customize your details below. Changes appear instantly on the preview.

@@ -552,7 +552,7 @@ const App = () => {
                     {activeSection === 'All Files' && (
                         <button 
                             onClick={() => setIsCoverGenOpen(true)} 
-                            className="py-3 px-5 bg-purple-900/45 hover:bg-teal-500/25 rounded-3xl text-white text-md font-bold transition flex items-center gap-2 border border-white/10 shadow-md shadow-purple-300/35"
+                            className="py-3 px-5 bg-purple-800/45 hover:bg-teal-500/25 rounded-3xl text-white text-md font-bold transition flex items-center gap-2 border border-white/30 shadow-md shadow-purple-300/45 "
                         >
                             <IconCover /> Cover page Generator
                         </button>
