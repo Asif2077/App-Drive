@@ -619,7 +619,7 @@ const App = () => {
         {/* MAIN CONTENT */}
       
 
-        {/* PASTE IT HERE: AT THE VERY BOTTOM OF MAIN */}
+        {/* PASTE IT H: AT THE VERY BOTTOM OF MAIN */}
       {/* showOnMobile={true} only if we are in 'All Files'.
            On PC, the component ignores this and shows itself anyway.
         */}
