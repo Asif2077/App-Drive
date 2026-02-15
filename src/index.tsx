@@ -12,6 +12,7 @@ import { FolderCard } from './components/FolderCard';
 import { FileCard } from './components/FileCard';
 import { UploadProgress } from './components/UploadProgress';
 import { DeveloperCredit } from './components/DeveloperCredit';
+import { Browser } from '@capacitor/browser';
 //import { DeveloperCredit } from './components/DeveloperCredit'; 
 
 
@@ -552,7 +553,7 @@ const App = () => {
                     {activeSection === 'All Files' && (
                         <button 
                             onClick={() => setIsCoverGenOpen(true)} 
-                            className="py-3 px-5 bg-purple-800/45 hover:bg-teal-500/25 rounded-3xl text-white text-md font-bold transition flex items-center gap-2 border border-white/30 shadow-md shadow-purple-300/45 "
+                            className="py-2 px-4 bg-indigo-950/80 text-cyan-400 hover:bg-teal-800 hover:text-orange rounded-full transition font-bold flex items-center gap-2 border border-white/25 shadow-md shadow-black-800 backdrop-blur-md"
                         >
                             <IconCover /> Cover page Generator
                         </button>
@@ -622,7 +623,8 @@ const App = () => {
       {/* showOnMobile={true} only if we are in 'All Files'.
            On PC, the component ignores this and shows itself anyway.
         */}
-        <DeveloperCredit showOnMobile={activeSection === 'All Files'} />
+        <DeveloperCredit showOnMobile={activeSection === 'All Files'  } />
+        
 
        {/* Closing tag of main */}
         
@@ -667,7 +669,13 @@ const App = () => {
                       
                       {/* Open Resource Button with Glass Gradient */}
                       <button 
-                        onClick={() => selectedFile.link && selectedFile.link !== '#' ? window.open(selectedFile.link, '_blank') : alert("Demo")} 
+                       onClick={async () => {
+    if (selectedFile.link && selectedFile.link !== '#') {
+        await Browser.open({ url: selectedFile.link });
+    } else {
+        alert("Demo");
+    }
+}}
                         className="w-full py-3.5 rounded-full text-white font-bold shadow-lg transition flex items-center justify-center gap-2 bg-gradient-to-r from-teal-600/80 to-purple-500/80 hover:from-purple-400/80 hover:to-purple-900/80 backdrop-blur-md border border-white/20"
                       >
                           <IconExternal /> Open Link
